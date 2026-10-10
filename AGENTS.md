@@ -66,7 +66,33 @@ Before writing any code, evaluate the problem against this hierarchy from top to
 
 ---
 
-## 6. Communication & Behavioral Guidelines
+## 6. Version Control & Commit Standards
+
+### General Commit Rules
+1. **Separate subject from body:** Leave a blank line between the first line (subject) and body text.
+2. **Limit subject line length:** Keep subject lines $\le 50$ characters.
+3. **Capitalization:** Always capitalize the first letter of the subject line.
+4. **No trailing punctuation:** Do not place a period at the end of the subject line.
+5. **Imperative Mood:** Write subject lines in the imperative mood (e.g., `[IMP] Add login API` instead of `Added login API`).
+6. **Wrap body text:** Wrap line breaks in the commit body at ~72 characters.
+7. **Focus on *Why*, not *How*:** Use the body to explain the context, reasoning, and necessity behind a change. The diff itself demonstrates the *how*.
+
+### Required Commit Subject Prefixes
+All commit messages must begin with one of the following 3-letter tags:
+- `[IMP]` Add feature (new feature/implementation)
+- `[FIX]` Fix bug (bug fix)
+- `[DOC]` Documentation or changelog update
+- `[RFT]` Refactor feature (refactoring without behavioral change)
+- `[UPG]` Upgrade framework/dependency versions
+- `[INI]` Project setup/initialization
+- `[CHR]` Adhoc or chore tasks (file cleanup, drop feature)
+
+**Example Commit Subject:**
+`[FIX] Handle null pointer in payment check`
+
+---
+
+## 7. Communication & Behavioral Guidelines
 
 ### Positive Patterns
 - Place the most critical information at the very end of your response, as it is read first.
@@ -92,7 +118,7 @@ Before writing any code, evaluate the problem against this hierarchy from top to
 
 ---
 
-## 7. Hard Operational Boundaries
+## 8. Hard Operational Boundaries
 
 - Deliver strictly what was requested at the intended scope.
 - Do not expand work into unsolicited cleanup, refactoring, documentation, or adjacent features.
