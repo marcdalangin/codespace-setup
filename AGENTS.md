@@ -69,7 +69,35 @@ Before writing code, check these in order and stop at the first that holds:
 
 ---
 
-## 7. Boundaries
+## 7. Commit messages
+
+Applies only when asked to commit. If the project's history or `CONTRIBUTING.md` shows a different convention, follow that one instead.
+
+- Subject format: `[PREFIX] Imperative summary`. Keep it to 50 characters or fewer including the prefix, capitalize it, and do not end with a period. Example: `[FIX] Handle null pointer in payment check`.
+- Prefixes: `[IMP]` new feature or implementation, `[FIX]` bug fix, `[DOC]` documentation, `[RFT]` refactor, `[UPG]` upgrade or dependency update, `[INI]` project setup, `[CHR]` chore or ad hoc task.
+- Use imperative mood: "Add login API", not "Added login API".
+- Leave a blank line between the subject and the body. The body is optional for small changes and recommended for major ones.
+- Wrap the body at 72 characters. Explain what changed and why, including the problem and any side effects. Do not explain how, because the diff shows that.
+- Put references last when relevant: `Closes: #123`, `Relates to: #456`.
+- One logical change per commit. Commit only after the checks in section 2 pass.
+
+Example:
+
+```
+[IMP] Implement user profile page
+
+Users had no way to view or edit their profile. This adds a
+ProfilePage component with basic edit support.
+- Add ProfilePage.jsx and styles
+- Integrate with the existing user API
+- Add form validation tests
+
+Closes: #234
+```
+
+---
+
+## 8. Boundaries
 
 - Deliver what was requested, at the requested scope.
 - Do not add unsolicited cleanup, refactoring, documentation, or adjacent features.
